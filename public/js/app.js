@@ -7,7 +7,7 @@ const weatherDisplay = document.querySelector('#forcast');
 
 weatherForm.addEventListener('submit',(e) => {
     e.preventDefault();
-    fetch('http://localhost:3000/weather?address='+input.value).then((response) => {
+    fetch('/weather?address='+input.value).then((response) => {
         response.json().then((data) => {
             if(data.error){
                 Display.textContent = data.error;
