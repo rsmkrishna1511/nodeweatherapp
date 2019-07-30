@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/sunny.png">
+</head>
+<body>
+    <div class='main-content'>
+        {{>header}}
+        
+        <form>
+            <input placeholder="location here" />
+            <button>Search</button>
+        </form>
+        <div>
+            <p class="result" id='errorMsg'></p>
+            <p class="result" id='forcast'></p>
+        </div>
+    </div>
+    
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+</html>
