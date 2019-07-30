@@ -4,6 +4,7 @@ const weatherForm = document.querySelector('form');
 const input = document.querySelector('input');
 const Display = document.querySelector('#errorMsg');
 const weatherDisplay = document.querySelector('#forcast');
+const placeDisplay = document.querySelector('#placeMsg');
 
 weatherForm.addEventListener('submit',(e) => {
     e.preventDefault();
@@ -12,7 +13,9 @@ weatherForm.addEventListener('submit',(e) => {
             if(data.error){
                 Display.textContent = data.error;
                 weatherDisplay.textContent = null;
+                placeDisplay.textContent = null;
             }else{
+                placeDisplay.textContent = data.place;
                 Display.textContent = data.summary;
                 weatherDisplay.textContent = data.temperature;
             }
